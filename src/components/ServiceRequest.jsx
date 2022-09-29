@@ -1,6 +1,7 @@
 import React from "react";
-
+import data from "../initial-data.json";
 function RequestList() {
+
   return (
     <div className="list-container">
       <table className="table table-striped">
@@ -14,7 +15,28 @@ function RequestList() {
             <th scope="col">Complete a Request</th>
           </tr>
         </thead>
-        <tbody id="main-table-body">{/* put all of the requests here */}</tbody>
+        <tbody id="main-table-body">    
+        {data.map((value, key) => {
+            return (
+              <tr key={key}>
+                <td scope="col"> </td>
+                <td scope="col">{value.name}</td>
+                <td scope="col">{value.sdescription}</td>
+                <td scope="col">{value.emailId}</td>
+                <td scope="col">{value.ldescription} </td>
+                <td scope="col">{<button 
+                                  type="button"
+                                  className="btn btn-success" 
+                                  id="complete-req-btn">    
+                                  Complete Request
+                                </button>}
+        
+        </td>
+                <td scope="col"></td>
+              </tr>
+            );
+          })}
+         </tbody>
       </table>
     </div>
   );
@@ -46,7 +68,9 @@ function Request({ request }) {
   );
 }
 
+
 function AddRequestForm() {
+ 
   return (
     <div className="form-contain">
       <div>
@@ -97,8 +121,12 @@ function AddRequestForm() {
           id="create-req-btn"
         >
           Create Request
+          
         </button>
-        <button type="button" className="btn btn-danger m-1" id="reset-req-btn">
+        <button 
+          type="button"
+          className="btn btn-danger m-1" 
+          id="reset-req-btn">    
           Reset Form
         </button>
       </form>
