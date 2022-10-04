@@ -22,6 +22,39 @@ beforeEach(() => {
 
 // Test cases to check functionality of complete and cancel buttons
 describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
+
+  // Reversing the order of test cases to accomodate for rendering side effects for some submissions
+  test("(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table", async () => {
+    await userEvent.click(screen.getByText("List requests"));
+    expect(document.getElementById("main-table-body").rows.length).toBe(3);
+    let cancelButtons = await screen.findAllByLabelText("cancel");
+    fireEvent.click(cancelButtons[cancelButtons.length - 1]);
+    // expect(
+    //   document.getElementsByClassName("list-container")[0].innerHTML
+    // ).toMatchSnapshot();
+
+    // Not using snapshot as each student can have different way of representing
+    // table body
+    expect(document.getElementById("main-table-body").rows.length).toBe(2);
+    // Check if the last row represented in the initial-data.json is not present
+    expect(
+      document
+        .getElementById("main-table-body")
+        .innerHTML.includes("i@need.sleep") &&
+        document
+          .getElementById("main-table-body")
+          .innerHTML.includes(
+            "My neighbors are jackhammering all day and all night. Please make them stop."
+          ) &&
+        document
+          .getElementById("main-table-body")
+          .innerHTML.includes("Tired") &&
+        document
+          .getElementById("main-table-body")
+          .innerHTML.includes("neighbors make too much noise")
+    ).toBe(false);
+  });
+
   test("(4 pts) Create Service Request and Complete it - Complete Request and Check CSS", async () => {
     let iname = makeRandomString(5);
     let isdesc = makeRandomString(15);
@@ -60,37 +93,6 @@ describe("Testing List Request Complete Cancel Functions -> 312 App", () => {
           `style="text-decoration: line-through;"`
         )
     ).toBe(true);
-  });
-
-  test("(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table", async () => {
-    await userEvent.click(screen.getByText("List requests"));
-    expect(document.getElementById("main-table-body").rows.length).toBe(3);
-    let cancelButtons = await screen.findAllByLabelText("cancel");
-    fireEvent.click(cancelButtons[cancelButtons.length - 1]);
-    // expect(
-    //   document.getElementsByClassName("list-container")[0].innerHTML
-    // ).toMatchSnapshot();
-
-    // Not using snapshot as each student can have different way of representing
-    // table body
-    expect(document.getElementById("main-table-body").rows.length).toBe(2);
-    // Check if the last row represented in the initial-data.json is not present
-    expect(
-      document
-        .getElementById("main-table-body")
-        .innerHTML.includes("i@need.sleep") &&
-        document
-          .getElementById("main-table-body")
-          .innerHTML.includes(
-            "My neighbors are jackhammering all day and all night. Please make them stop."
-          ) &&
-        document
-          .getElementById("main-table-body")
-          .innerHTML.includes("Tired") &&
-        document
-          .getElementById("main-table-body")
-          .innerHTML.includes("neighbors make too much noise")
-    ).toBe(false);
   });
 
   test("(4 pts) Create Service Request and Cancel it - Random Service", async () => {

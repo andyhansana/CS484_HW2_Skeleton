@@ -112,7 +112,6 @@ describe("Testing Create and List Request Functionality -> 312 App", () => {
       target: { value: ilongdesc },
     });
 
-    console.log(document.getElementById("emailId").value);
     expect(
       document.getElementById("name").value.includes(iname) &&
         document.getElementById("sdescription").value.includes(isdesc) &&
