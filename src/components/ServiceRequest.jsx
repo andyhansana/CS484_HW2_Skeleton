@@ -1,7 +1,6 @@
-import React from "react";
-import data from "../initial-data.json";
-function RequestList() {
+import React, { useState } from "react";
 
+function RequestList({ requests, setRequests }) {
   return (
     <div className="list-container">
       <table className="table table-striped">
@@ -15,52 +14,68 @@ function RequestList() {
             <th scope="col">Complete a Request</th>
           </tr>
         </thead>
-        <tbody id="main-table-body">    
-        {data.map((value, key) => {
+        <tbody id="main-table-body">
+          {requests.map((value) => {
             return (
-              <tr key={key}>
-                <td scope="col"> </td>
-                <td scope="col">{value.name}</td>
-                <td scope="col">{value.sdescription}</td>
-                <td scope="col">{value.emailId}</td>
-                <td scope="col">{value.ldescription} </td>
-                <td scope="col">{<button 
-                                  type="button"
-                                  className="btn btn-success" 
-                                  id="complete-req-btn">    
-                                  Complete Request
-                                </button>}
-        
-        </td>
-                <td scope="col"></td>
-              </tr>
+              <Request
+                value={value}
+                requests={requests}
+                setRequests={setRequests}
+              />
             );
           })}
-         </tbody>
+        </tbody>
       </table>
     </div>
   );
 }
 
-function Request({ request }) {
+function Request({ value, requests, setRequests }) {
+  const removeRequest = () => {
+    setRequests(requests.filter((x) => x.name !== value.name));
+  };
+
+  const completeRequest = () => {
+    const updatedState = requests.map((x) => {
+      // the object x is equal to object value
+      if (x === value) {
+        return { ...x, isCompleted: true };
+      }
+
+      return x;
+    });
+
+    setRequests(updatedState);
+  };
+
   return (
     <tr
       className="request"
-      style={{ textDecoration: request.isCompleted ? "line-through" : "" }}
+      style={{ textDecoration: value.isCompleted ? "line-through" : "" }}
     >
       <td>
         <button
           className="btn-close"
           aria-label="cancel"
           type="button"
+          onClick={() => {
+            removeRequest();
+          }}
         ></button>
       </td>
-      <td>{request.name}</td>
-      <td>{request.sdescription}</td>
-      <td>{request.emailId}</td>
-      <td>{request.ldescription}</td>
+      <td>{value.name}</td>
+      <td>{value.sdescription}</td>
+      <td>{value.emailId}</td>
+      <td>{value.ldescription}</td>
       <td>
-        <button className="btn-primary btn" aria-label="complete" type="button">
+        <button
+          className="btn-primary btn"
+          aria-label="complete"
+          type="button"
+          onClick={() => {
+            completeRequest();
+          }}
+        >
           Complete
         </button>
       </td>
@@ -68,9 +83,35 @@ function Request({ request }) {
   );
 }
 
+function AddRequestForm({ requests, setRequests }) {
+  const [formValues, setFormValues] = useState({
+    name: "",
+    sdescription: "",
+    emailId: "",
+    ldescription: "",
+  });
 
-function AddRequestForm() {
- 
+  const clearForm = () => {
+    setFormValues({
+      name: "",
+      sdescription: "",
+      emailId: "",
+      ldescription: "",
+    });
+  };
+
+  const makeRequest = () => {
+    setRequests([...requests, formValues]);
+    clearForm();
+  };
+
+  const handleInputChange = (event) => {
+    const target = event.target;
+    const name = target.name;
+
+    setFormValues({ ...formValues, [name]: target.value });
+  };
+
   return (
     <div className="form-contain">
       <div>
@@ -86,6 +127,10 @@ function AddRequestForm() {
             name="name"
             className="form-control"
             placeholder="Enter Name"
+            value={formValues.name}
+            onChange={(event) => {
+              handleInputChange(event);
+            }}
           />
         </div>
         <div className="form-outline mb-4">
@@ -95,6 +140,10 @@ function AddRequestForm() {
             name="sdescription"
             className="form-control"
             placeholder="Enter Short Description"
+            value={formValues.sdescription}
+            onChange={(event) => {
+              handleInputChange(event);
+            }}
           />
         </div>
         <div className="form-outline mb-4">
@@ -104,6 +153,10 @@ function AddRequestForm() {
             name="emailId"
             className="form-control"
             placeholder="Enter Email ID"
+            value={formValues.emailId}
+            onChange={(event) => {
+              handleInputChange(event);
+            }}
           />
         </div>
         <div className="form-group">
@@ -113,20 +166,30 @@ function AddRequestForm() {
             name="ldescription"
             id="ldescription"
             rows="5"
+            value={formValues.ldescription}
+            onChange={(event) => {
+              handleInputChange(event);
+            }}
           ></textarea>
         </div>
         <button
           type="button"
           className="btn btn-primary m-1"
           id="create-req-btn"
+          onClick={() => {
+            makeRequest();
+          }}
         >
           Create Request
-          
         </button>
-        <button 
+        <button
           type="button"
-          className="btn btn-danger m-1" 
-          id="reset-req-btn">    
+          className="btn btn-danger m-1"
+          id="reset-req-btn"
+          onClick={() => {
+            clearForm();
+          }}
+        >
           Reset Form
         </button>
       </form>

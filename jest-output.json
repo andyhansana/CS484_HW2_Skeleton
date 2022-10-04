@@ -1,0 +1,131 @@
+{
+  "numTotalTestSuites": 6,
+  "numPassedTestSuites": 6,
+  "numFailedTestSuites": 0,
+  "numPendingTestSuites": 0,
+  "numTotalTests": 7,
+  "numPassedTests": 5,
+  "numFailedTests": 2,
+  "numPendingTests": 0,
+  "numTodoTests": 0,
+  "startTime": 1664901675422,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "Testing List Request Complete Cancel Functions -> 312 App"
+          ],
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
+          "status": "passed",
+          "title": "(4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
+          "duration": 359,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Testing List Request Complete Cancel Functions -> 312 App"
+          ],
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
+          "status": "passed",
+          "title": "(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
+          "duration": 57,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Testing List Request Complete Cancel Functions -> 312 App"
+          ],
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Cancel it - Random Service",
+          "status": "passed",
+          "title": "(4 pts) Create Service Request and Cancel it - Random Service",
+          "duration": 218,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1664901678271,
+      "endTime": 1664901678905,
+      "status": "passed",
+      "message": "",
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ListRequestsTests.test.jsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "Testing Create and List Request Functionality -> 312 App"
+          ],
+          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page",
+          "status": "passed",
+          "title": "(5 pts) Create a service request and see if appears on list request page",
+          "duration": 352,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Testing Create and List Request Functionality -> 312 App"
+          ],
+          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page and click reset button",
+          "status": "passed",
+          "title": "(5 pts) Create a service request and see if appears on list request page and click reset button",
+          "duration": 76,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1664901678272,
+      "endTime": 1664901678700,
+      "status": "passed",
+      "message": "",
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/AddServiceRequestPage.test.jsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "Test Cases For Charting -> 312 App "
+          ],
+          "fullName": " Test Cases For Charting -> 312 App  (2 pts) Test Chart Component with initial-data.json data",
+          "status": "failed",
+          "title": "(2 pts) Test Chart Component with initial-data.json data",
+          "duration": 126,
+          "failureMessages": [
+            "Snapshot `Test Cases For Charting -> 312 App  > (2 pts) Test Chart Component with initial-data.json data 1` mismatched"
+          ],
+          "location": {
+            "line": 24,
+            "column": 6
+          }
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Test Cases For Charting -> 312 App "
+          ],
+          "fullName": " Test Cases For Charting -> 312 App  (3 pts)Test Chart Component After Appending Some Data to the request",
+          "status": "failed",
+          "title": "(3 pts)Test Chart Component After Appending Some Data to the request",
+          "duration": 211,
+          "failureMessages": [
+            "Snapshot `Test Cases For Charting -> 312 App  > (3 pts)Test Chart Component After Appending Some Data to the request 1` mismatched"
+          ],
+          "location": {
+            "line": 40,
+            "column": 6
+          }
+        }
+      ],
+      "startTime": 1664901678272,
+      "endTime": 1664901678609,
+      "status": "failed",
+      "message": "",
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ChartComponentTest.test.jsx"
+    }
+  ]
+}
