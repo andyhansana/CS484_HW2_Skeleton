@@ -34,7 +34,8 @@ function RequestChart({ requests }) {
         colorOptions={{ luminosity: "dark" }}
         className="simple-cloud"
         randomSeed={484}
-      />{" "}
+        
+      />
     </div>
   );
 }

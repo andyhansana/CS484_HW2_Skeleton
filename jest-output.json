@@ -8,40 +8,9 @@
   "numFailedTests": 2,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1664902228709,
+  "startTime": 1664903112376,
   "success": false,
   "testResults": [
-    {
-      "assertionResults": [
-        {
-          "ancestorTitles": [
-            "",
-            "Testing Create and List Request Functionality -> 312 App"
-          ],
-          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page",
-          "status": "passed",
-          "title": "(5 pts) Create a service request and see if appears on list request page",
-          "duration": 355,
-          "failureMessages": []
-        },
-        {
-          "ancestorTitles": [
-            "",
-            "Testing Create and List Request Functionality -> 312 App"
-          ],
-          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page and click reset button",
-          "status": "passed",
-          "title": "(5 pts) Create a service request and see if appears on list request page and click reset button",
-          "duration": 91,
-          "failureMessages": []
-        }
-      ],
-      "startTime": 1664902230963,
-      "endTime": 1664902231409,
-      "status": "passed",
-      "message": "",
-      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/AddServiceRequestPage.test.jsx"
-    },
     {
       "assertionResults": [
         {
@@ -52,7 +21,7 @@
           "fullName": " Testing List Request Complete Cancel Functions -> 312 App (2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
           "status": "passed",
           "title": "(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
-          "duration": 144,
+          "duration": 127,
           "failureMessages": []
         },
         {
@@ -63,7 +32,7 @@
           "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
           "status": "passed",
           "title": "(4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
-          "duration": 243,
+          "duration": 271,
           "failureMessages": []
         },
         {
@@ -74,15 +43,46 @@
           "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Cancel it - Random Service",
           "status": "passed",
           "title": "(4 pts) Create Service Request and Cancel it - Random Service",
-          "duration": 201,
+          "duration": 216,
           "failureMessages": []
         }
       ],
-      "startTime": 1664902230964,
-      "endTime": 1664902231552,
+      "startTime": 1664903114614,
+      "endTime": 1664903115228,
       "status": "passed",
       "message": "",
       "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ListRequestsTests.test.jsx"
+    },
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            "",
+            "Testing Create and List Request Functionality -> 312 App"
+          ],
+          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page",
+          "status": "passed",
+          "title": "(5 pts) Create a service request and see if appears on list request page",
+          "duration": 349,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Testing Create and List Request Functionality -> 312 App"
+          ],
+          "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page and click reset button",
+          "status": "passed",
+          "title": "(5 pts) Create a service request and see if appears on list request page and click reset button",
+          "duration": 79,
+          "failureMessages": []
+        }
+      ],
+      "startTime": 1664903114615,
+      "endTime": 1664903115043,
+      "status": "passed",
+      "message": "",
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/AddServiceRequestPage.test.jsx"
     },
     {
       "assertionResults": [
@@ -94,7 +94,7 @@
           "fullName": " Test Cases For Charting -> 312 App  (2 pts) Test Chart Component with initial-data.json data",
           "status": "failed",
           "title": "(2 pts) Test Chart Component with initial-data.json data",
-          "duration": 157,
+          "duration": 122,
           "failureMessages": [
             "Snapshot `Test Cases For Charting -> 312 App  > (2 pts) Test Chart Component with initial-data.json data 1` mismatched"
           ],
@@ -111,7 +111,7 @@
           "fullName": " Test Cases For Charting -> 312 App  (3 pts)Test Chart Component After Appending Some Data to the request",
           "status": "failed",
           "title": "(3 pts)Test Chart Component After Appending Some Data to the request",
-          "duration": 226,
+          "duration": 242,
           "failureMessages": [
             "Snapshot `Test Cases For Charting -> 312 App  > (3 pts)Test Chart Component After Appending Some Data to the request 1` mismatched"
           ],
@@ -121,8 +121,8 @@
           }
         }
       ],
-      "startTime": 1664902230965,
-      "endTime": 1664902231348,
+      "startTime": 1664903114615,
+      "endTime": 1664903114979,
       "status": "failed",
       "message": "",
       "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ChartComponentTest.test.jsx"
