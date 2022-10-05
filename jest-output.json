@@ -4,54 +4,43 @@
   "numFailedTestSuites": 0,
   "numPendingTestSuites": 0,
   "numTotalTests": 7,
-  "numPassedTests": 5,
-  "numFailedTests": 2,
+  "numPassedTests": 7,
+  "numFailedTests": 0,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1664903112376,
-  "success": false,
+  "startTime": 1664937920540,
+  "success": true,
   "testResults": [
     {
       "assertionResults": [
         {
           "ancestorTitles": [
             "",
-            "Testing List Request Complete Cancel Functions -> 312 App"
+            "Test Cases For Charting -> 312 App "
           ],
-          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
+          "fullName": " Test Cases For Charting -> 312 App  (2 pts) Test Chart Component with initial-data.json data",
           "status": "passed",
-          "title": "(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
-          "duration": 127,
+          "title": "(2 pts) Test Chart Component with initial-data.json data",
+          "duration": 147,
           "failureMessages": []
         },
         {
           "ancestorTitles": [
             "",
-            "Testing List Request Complete Cancel Functions -> 312 App"
+            "Test Cases For Charting -> 312 App "
           ],
-          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
+          "fullName": " Test Cases For Charting -> 312 App  (3 pts)Test Chart Component After Appending Some Data to the request",
           "status": "passed",
-          "title": "(4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
-          "duration": 271,
-          "failureMessages": []
-        },
-        {
-          "ancestorTitles": [
-            "",
-            "Testing List Request Complete Cancel Functions -> 312 App"
-          ],
-          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Cancel it - Random Service",
-          "status": "passed",
-          "title": "(4 pts) Create Service Request and Cancel it - Random Service",
-          "duration": 216,
+          "title": "(3 pts)Test Chart Component After Appending Some Data to the request",
+          "duration": 239,
           "failureMessages": []
         }
       ],
-      "startTime": 1664903114614,
-      "endTime": 1664903115228,
+      "startTime": 1664937922852,
+      "endTime": 1664937923238,
       "status": "passed",
       "message": "",
-      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ListRequestsTests.test.jsx"
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ChartComponentTest.test.jsx"
     },
     {
       "assertionResults": [
@@ -63,7 +52,7 @@
           "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page",
           "status": "passed",
           "title": "(5 pts) Create a service request and see if appears on list request page",
-          "duration": 349,
+          "duration": 345,
           "failureMessages": []
         },
         {
@@ -74,12 +63,12 @@
           "fullName": " Testing Create and List Request Functionality -> 312 App (5 pts) Create a service request and see if appears on list request page and click reset button",
           "status": "passed",
           "title": "(5 pts) Create a service request and see if appears on list request page and click reset button",
-          "duration": 79,
+          "duration": 77,
           "failureMessages": []
         }
       ],
-      "startTime": 1664903114615,
-      "endTime": 1664903115043,
+      "startTime": 1664937922852,
+      "endTime": 1664937923274,
       "status": "passed",
       "message": "",
       "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/AddServiceRequestPage.test.jsx"
@@ -89,43 +78,42 @@
         {
           "ancestorTitles": [
             "",
-            "Test Cases For Charting -> 312 App "
+            "Testing List Request Complete Cancel Functions -> 312 App"
           ],
-          "fullName": " Test Cases For Charting -> 312 App  (2 pts) Test Chart Component with initial-data.json data",
-          "status": "failed",
-          "title": "(2 pts) Test Chart Component with initial-data.json data",
-          "duration": 122,
-          "failureMessages": [
-            "Snapshot `Test Cases For Charting -> 312 App  > (2 pts) Test Chart Component with initial-data.json data 1` mismatched"
-          ],
-          "location": {
-            "line": 24,
-            "column": 6
-          }
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
+          "status": "passed",
+          "title": "(2 pts) Create Service Request and Cancel it - Cancel and check if the request disappears from table",
+          "duration": 133,
+          "failureMessages": []
         },
         {
           "ancestorTitles": [
             "",
-            "Test Cases For Charting -> 312 App "
+            "Testing List Request Complete Cancel Functions -> 312 App"
           ],
-          "fullName": " Test Cases For Charting -> 312 App  (3 pts)Test Chart Component After Appending Some Data to the request",
-          "status": "failed",
-          "title": "(3 pts)Test Chart Component After Appending Some Data to the request",
-          "duration": 242,
-          "failureMessages": [
-            "Snapshot `Test Cases For Charting -> 312 App  > (3 pts)Test Chart Component After Appending Some Data to the request 1` mismatched"
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
+          "status": "passed",
+          "title": "(4 pts) Create Service Request and Complete it - Complete Request and Check CSS",
+          "duration": 288,
+          "failureMessages": []
+        },
+        {
+          "ancestorTitles": [
+            "",
+            "Testing List Request Complete Cancel Functions -> 312 App"
           ],
-          "location": {
-            "line": 40,
-            "column": 6
-          }
+          "fullName": " Testing List Request Complete Cancel Functions -> 312 App (4 pts) Create Service Request and Cancel it - Random Service",
+          "status": "passed",
+          "title": "(4 pts) Create Service Request and Cancel it - Random Service",
+          "duration": 215,
+          "failureMessages": []
         }
       ],
-      "startTime": 1664903114615,
-      "endTime": 1664903114979,
-      "status": "failed",
+      "startTime": 1664937922857,
+      "endTime": 1664937923493,
+      "status": "passed",
       "message": "",
-      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ChartComponentTest.test.jsx"
+      "name": "C:/Users/Andy/Documents/GitHub/CS484_HW2_Skeleton/src/tests/ListRequestsTests.test.jsx"
     }
   ]
 }

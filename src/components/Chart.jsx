@@ -27,17 +27,14 @@ function RequestChart({ requests }) {
 
   return (
     <div className="form-contain">
-      <TagCloud
-        minSize={24}
+      <TagCloud minSize={24}
         maxSize={48}
         tags={wordFreqArray}
-        colorOptions={{ luminosity: "dark" }}
+        colorOptions={{luminosity: 'dark'}}
         className="simple-cloud"
         randomSeed={484}
-        
-      />
-    </div>
-  );
+      />  </div>
+  )
 }
 
-export default RequestChart;
+export default RequestChart 
